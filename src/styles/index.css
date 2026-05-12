@@ -1,0 +1,63 @@
+@import "./fonts.css";
+@import "./tokens.css";
+@import "./animations.css";
+@import "./utilities.css";
+@import "tailwindcss";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    min-height: 100%;
+    width: 100%;
+}
+
+html {
+    background: var(--color-cathedral-900);
+    color: var(--color-ivory-100);
+    font-family: var(--font-body);
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 30% 10%, rgba(245, 214, 137, 0.14), transparent 30%),
+        linear-gradient(180deg, var(--color-cathedral-900), var(--color-pine-900));
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.001ms !important;
+    }
+}

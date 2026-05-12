@@ -1,0 +1,26 @@
+:root {
+    --color-cathedral-950: #061b18;
+    --color-cathedral-900: #0b2f2a;
+    --color-cathedral-800: #123c35;
+    --color-pine-900: #09241f;
+    --color-pine-800: #123c35;
+
+    --color-ivory-50: #fffdf7;
+    --color-ivory-100: #fff8ec;
+    --color-ivory-200: #f7ead2;
+
+    --color-gold-300: #f5d689;
+    --color-gold-400: #dabb5c;
+    --color-gold-500: #c9a646;
+    --color-gold-700: #85691f;
+
+    --color-burgundy-700: #6e1f2d;
+    --color-sapphire-700: #1c4d70;
+
+    --font-display: "Cormorant Garamond", serif;
+    --font-sacred: "Cinzel", serif;
+    --font-body: "Inter", system-ui, sans-serif;
+
+    --ease-sacred: cubic-bezier(0.22, 1, 0.36, 1);
+    --stage-radius: 36px;
+}

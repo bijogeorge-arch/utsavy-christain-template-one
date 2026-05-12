@@ -1,0 +1,436 @@
+@keyframes candle-flicker {
+
+    0%,
+    100% {
+        opacity: 0.78;
+        transform: scaleY(1) translateY(0);
+    }
+
+    35% {
+        opacity: 1;
+        transform: scaleY(1.12) translateY(-1px);
+    }
+
+    65% {
+        opacity: 0.72;
+        transform: scaleY(0.92) translateY(1px);
+    }
+}
+
+@keyframes gold-shimmer {
+    0% {
+        opacity: 0.35;
+        transform: translateX(-35%) skewX(-12deg);
+    }
+
+    55% {
+        opacity: 0.88;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(135%) skewX(-12deg);
+    }
+}
+
+@keyframes halo-rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes mist-drift {
+
+    0%,
+    100% {
+        opacity: 0.22;
+        transform: translate3d(-3%, 0, 0) scale(1);
+    }
+
+    50% {
+        opacity: 0.42;
+        transform: translate3d(5%, -2%, 0) scale(1.06);
+    }
+}
+
+@keyframes petal-drift {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -10vh, 0) rotate(0deg);
+    }
+
+    15% {
+        opacity: 0.75;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate3d(-18vw, 110vh, 0) rotate(360deg);
+    }
+}
+
+@keyframes pulse-soft {
+
+    0%,
+    100% {
+        opacity: 0.55;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.045);
+    }
+}
+
+@keyframes family-line-draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes ring-path-draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes blessing-orbit {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Ring / Engagement visuals */
+
+.ring-path-draw {
+    stroke-dasharray: 340;
+    stroke-dashoffset: 340;
+    animation: ring-path-draw 2.4s var(--ease-sacred) forwards;
+}
+
+.ring-delay {
+    animation-delay: 0.28s;
+}
+
+.ring-blessing-halo {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: halo-rotate 18s linear infinite;
+}
+
+.ring-blessing-rays {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: pulse-soft 4.2s ease-in-out infinite;
+}
+
+.blessing-orbit {
+    animation: blessing-orbit 22s linear infinite;
+}
+
+/* Countdown visuals */
+
+.countdown-halo-main {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: halo-rotate 24s linear infinite;
+}
+
+.countdown-ticks {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: halo-rotate 36s linear reverse infinite;
+}
+
+.countdown-bell {
+    transform-box: fill-box;
+    transform-origin: 50% 8%;
+    animation: bell-sway 4.6s ease-in-out infinite;
+}
+
+.countdown-sparkle-orbit {
+    animation: blessing-orbit 30s linear infinite;
+}
+
+@keyframes bell-sway {
+
+    0%,
+    100% {
+        transform: rotate(-1.8deg);
+    }
+
+    50% {
+        transform: rotate(1.8deg);
+    }
+}
+
+/* Event / Contact / Thank-you visuals */
+
+.event-timeline-pulse {
+    animation: pulse-soft 3s ease-in-out infinite;
+}
+
+.contact-orbit,
+.thank-you-seal-ring {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: halo-rotate 26s linear infinite;
+}
+
+/* Welcome scene */
+
+.welcome-chapel-art {
+    animation: welcome-chapel-breathe 7s ease-in-out infinite;
+}
+
+.welcome-arch-lines path,
+.welcome-window path,
+.welcome-altar-line path,
+.welcome-floor-lines path {
+    stroke-dasharray: 900;
+    stroke-dashoffset: 900;
+    animation: welcome-line-draw 3.2s var(--ease-sacred) forwards;
+}
+
+.welcome-window path {
+    animation-delay: 0.28s;
+}
+
+.welcome-altar-line path {
+    animation-delay: 0.5s;
+}
+
+.welcome-floor-lines path {
+    animation-delay: 0.75s;
+}
+
+.welcome-aisle-light {
+    animation: welcome-aisle-sweep 5.8s ease-in-out infinite;
+}
+
+.welcome-name-lockup {
+    transform-origin: 100% 50%;
+    animation: welcome-name-breathe 6.5s ease-in-out infinite;
+}
+
+.welcome-quote-card {
+    animation: welcome-soft-float 6.8s ease-in-out infinite;
+}
+
+.welcome-date-badge {
+    position: relative;
+    animation: welcome-soft-float 7.4s ease-in-out infinite;
+}
+
+.welcome-dust {
+    animation-name: welcome-dust-rise;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes welcome-line-draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes welcome-chapel-breathe {
+
+    0%,
+    100% {
+        opacity: 0.78;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.025);
+    }
+}
+
+@keyframes welcome-aisle-sweep {
+
+    0%,
+    100% {
+        opacity: 0.22;
+        transform: translateY(-18px) scaleY(0.92) rotate(3deg);
+    }
+
+    50% {
+        opacity: 0.55;
+        transform: translateY(24px) scaleY(1.05) rotate(3deg);
+    }
+}
+
+@keyframes welcome-name-breathe {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        opacity: 0.96;
+        transform: translateY(-3px) scale(1.012);
+    }
+}
+
+@keyframes welcome-soft-float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+@keyframes welcome-dust-rise {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 22px, 0) scale(0.7);
+    }
+
+    24% {
+        opacity: 0.65;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate3d(8px, -64px, 0) scale(1.1);
+    }
+}
+
+/* 2D dove */
+
+.dove-2d-left-wing {
+    transform-box: fill-box;
+    transform-origin: 88% 66%;
+    animation: dove-2d-left-wing 1.2s ease-in-out infinite;
+}
+
+.dove-2d-right-wing {
+    transform-box: fill-box;
+    transform-origin: 14% 66%;
+    animation: dove-2d-right-wing 1.2s ease-in-out infinite;
+}
+
+.dove-2d-body {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: dove-2d-body 3.2s ease-in-out infinite;
+}
+
+@keyframes dove-2d-left-wing {
+
+    0%,
+    100% {
+        transform: rotate(-5deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(9deg) translateY(-1px);
+    }
+}
+
+@keyframes dove-2d-right-wing {
+
+    0%,
+    100% {
+        transform: rotate(5deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(-9deg) translateY(-1px);
+    }
+}
+
+@keyframes dove-2d-body {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-1px) scale(1.01);
+    }
+}
+
+/* Welcome star journey */
+
+.welcome-blessing-star,
+.welcome-final-star,
+.welcome-i-spark,
+.welcome-daniel-touch {
+    will-change: transform, opacity;
+}
+
+.welcome-final-star {
+    animation: welcome-final-star-pulse 3.4s ease-in-out 4.9s infinite;
+}
+
+@keyframes welcome-final-star-pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 8px rgba(245, 214, 137, 0.42));
+    }
+
+    50% {
+        transform: scale(1.18);
+        filter: drop-shadow(0 0 18px rgba(245, 214, 137, 0.76));
+    }
+}
+
+/* Inside-zoom journey transition */
+
+.journey-chamber {
+    transform-origin: 50% 42%;
+    transform-style: preserve-3d;
+    will-change: transform, opacity, filter;
+}
+
+.journey-camera-plane {
+    transform-origin: 50% 42%;
+    transform-style: preserve-3d;
+}
+
+.journey-portal-glow {
+    background:
+        radial-gradient(circle at 50% 42%,
+            rgba(255, 248, 236, 0.82) 0%,
+            rgba(245, 214, 137, 0.36) 18%,
+            rgba(201, 166, 70, 0.14) 36%,
+            transparent 68%);
+    mix-blend-mode: screen;
+}
+
+/* Story roadmap */
+
+.story-roadmap-glow-dot {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: story-roadmap-pulse 2.8s ease-in-out infinite;
+}
+
+@keyframes story-roadmap-pulse {
+
+    0%,
+    100% {
+        opacity: 0.78;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.16);
+    }
+}
+
+/* Gallery */
