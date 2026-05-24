@@ -27,25 +27,25 @@ export function CelebrationScene({ data }: CelebrationSceneProps) {
                 </div>
             }
         >
-            <section className="relative z-20 flex h-full min-h-0 flex-col px-6 pb-[5.75rem] pt-7 text-right safe-top">
+            <section className="relative z-20 flex w-full flex-col px-6 pt-7 text-right safe-top">
                 <motion.p
                     variants={itemVariants}
-                    className="font-[var(--font-sacred)] text-[9px] font-bold uppercase tracking-[0.34em] text-[var(--color-gold-300)]"
+                    className="font-[var(--font-sacred)] text-[9px] font-bold uppercase tracking-[0.34em] text-[var(--color-gold-700)]"
                 >
                     Celebration View
                 </motion.p>
 
                 <motion.h1
                     variants={itemVariants}
-                    className="ml-auto mt-2 max-w-[300px] font-[var(--font-display)] text-[clamp(2.35rem,8.8vw,3.7rem)] font-semibold leading-[0.88] tracking-[-0.07em]"
+                    className="ml-auto mt-2 max-w-[300px] font-[var(--font-display)] text-[clamp(2.35rem,8.8vw,3.7rem)] font-semibold leading-[0.88] tracking-[-0.07em] text-[var(--color-cathedral-950)]"
                 >
                     Bride
-                    <span className="block text-[var(--color-gold-300)]">& Groom</span>
+                    <span className="block text-[var(--color-gold-500)]">& Groom</span>
                 </motion.h1>
 
                 <motion.p
                     variants={itemVariants}
-                    className="ml-auto mt-2 max-w-[305px] text-sm leading-6 text-[rgba(255,248,236,0.72)]"
+                    className="ml-auto mt-2 max-w-[305px] text-sm leading-6 text-[var(--color-cathedral-800)]"
                 >
                     Tap to reveal each sacred spotlight.
                 </motion.p>
@@ -57,7 +57,7 @@ export function CelebrationScene({ data }: CelebrationSceneProps) {
                     <GoldDivider />
                 </motion.div>
 
-                <div className="mt-3 flex min-h-0 flex-1 items-center justify-end">
+                <div className="mt-6 flex items-center justify-end">
                     <motion.div variants={itemVariants} className="w-full max-w-[340px]">
                         <SacredSpotlightCard bride={data.bride} groom={data.groom} />
                     </motion.div>

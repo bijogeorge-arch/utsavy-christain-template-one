@@ -26,7 +26,7 @@ type ProgressIndicatorProps = {
 
 function ProgressIndicator({ currentIndex, total }: ProgressIndicatorProps) {
     return (
-        <div className="mx-auto flex min-h-9 w-fit items-center justify-center gap-2 rounded-full border border-[rgba(201,166,70,0.24)] bg-[rgba(6,27,24,0.58)] px-4 backdrop-blur-xl">
+        <div className="mx-auto flex min-h-9 w-fit items-center justify-center gap-2 rounded-full border border-[rgba(var(--color-gold-500-rgb),0.22)] bg-[rgba(var(--color-ivory-50-rgb),0.85)] px-4 backdrop-blur-xl">
             {Array.from({ length: total }).map((_, index) => {
                 const isActive = index === currentIndex;
 
@@ -34,8 +34,8 @@ function ProgressIndicator({ currentIndex, total }: ProgressIndicatorProps) {
                     <span
                         key={index}
                         className={`h-3 rounded-full transition-all ${isActive
-                                ? "w-8 bg-[var(--color-gold-300)] shadow-[0_0_18px_rgba(245,214,137,0.52)]"
-                                : "w-3 bg-[rgba(255,248,236,0.34)]"
+                                ? "w-8 bg-[var(--color-gold-500)] shadow-[0_0_18px_rgba(var(--color-gold-500-rgb),0.3)]"
+                                : "w-3 bg-[rgba(var(--color-cathedral-900-rgb),0.24)]"
                             }`}
                     />
                 );
@@ -93,7 +93,7 @@ export function SceneControls(props: SceneControlsProps) {
                     type="button"
                     onClick={handlePrevious}
                     aria-label="Previous screen"
-                    className="grid min-h-14 place-items-center rounded-full border border-[rgba(201,166,70,0.48)] bg-[rgba(6,27,24,0.52)] text-lg text-[var(--color-gold-300)] backdrop-blur-xl transition active:scale-95"
+                    className="grid min-h-14 place-items-center rounded-full border border-[rgba(var(--color-gold-500-rgb),0.22)] bg-[rgba(var(--color-ivory-50-rgb),0.85)] text-lg text-[var(--color-cathedral-800)] backdrop-blur-xl transition hover:bg-[rgba(var(--color-gold-500-rgb),0.12)] hover:text-[var(--color-gold-600)] active:scale-95"
                 >
                     ←
                 </button>

@@ -8,7 +8,7 @@ type SacredSwitcherProps = {
 
 export function SacredSwitcher({ activeSide, onChange }: SacredSwitcherProps) {
     return (
-        <div className="relative flex w-full items-center justify-between rounded-full border border-[rgba(201,166,70,0.32)] bg-[rgba(255,248,236,0.06)] p-1.5 backdrop-blur-md shadow-[inset_0_1px_4px_rgba(255,255,255,0.05)]">
+        <div className="relative flex w-full items-center justify-between rounded-full border border-[rgba(var(--color-gold-500-rgb),0.32)] bg-[rgba(var(--color-ivory-100-rgb),0.65)] p-1.5 backdrop-blur-md">
             {/* Sliding Background Indicator with Candle Glow */}
             <motion.div
                 className="absolute h-[calc(100%-12px)] w-[calc(50%-6px)] rounded-full bg-[linear-gradient(135deg,var(--color-gold-500),var(--color-gold-300))]"
@@ -25,7 +25,7 @@ export function SacredSwitcher({ activeSide, onChange }: SacredSwitcherProps) {
             >
                 {/* Candle Glow Effect */}
                 <div className="absolute inset-0 rounded-full bg-[var(--color-gold-400)] blur-md opacity-40 animate-pulse" />
-                <div className="absolute inset-0 rounded-full shadow-[0_0_20px_rgba(201,166,70,0.5),inset_0_1px_2px_rgba(255,255,255,0.4)]" />
+                <div className="absolute inset-0 rounded-full shadow-[0_0_20px_rgba(var(--color-gold-500-rgb),0.5),inset_0_1px_2px_rgba(255,255,255,0.4)]" />
             </motion.div>
 
             {/* Sacred Seal Indicator (Center Decor) */}
@@ -43,7 +43,7 @@ export function SacredSwitcher({ activeSide, onChange }: SacredSwitcherProps) {
                     "relative z-10 flex-1 py-3 text-[11px] font-bold uppercase tracking-[0.32em] transition-all duration-500",
                     activeSide === "Bride" 
                         ? "text-[var(--color-cathedral-900)] scale-100" 
-                        : "text-[rgba(255,248,236,0.5)] scale-95 hover:text-[rgba(255,248,236,0.8)]",
+                        : "text-[var(--color-cathedral-800)]/60 scale-95 hover:text-[var(--color-cathedral-950)]",
                 )}
             >
                 Bride's Side
@@ -55,7 +55,7 @@ export function SacredSwitcher({ activeSide, onChange }: SacredSwitcherProps) {
                     "relative z-10 flex-1 py-3 text-[11px] font-bold uppercase tracking-[0.32em] transition-all duration-500",
                     activeSide === "Groom" 
                         ? "text-[var(--color-cathedral-900)] scale-100" 
-                        : "text-[rgba(255,248,236,0.5)] scale-95 hover:text-[rgba(255,248,236,0.8)]",
+                        : "text-[var(--color-cathedral-800)]/60 scale-95 hover:text-[var(--color-cathedral-950)]",
                 )}
             >
                 Groom's Side

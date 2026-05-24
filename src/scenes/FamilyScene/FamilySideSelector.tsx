@@ -24,7 +24,7 @@ export function FamilySideSelector({ activeSide, onChange }: FamilySideSelectorP
     return (
         <div
             role="tablist"
-            className="flex w-full gap-1.5 rounded-[22px] border border-[rgba(201,166,70,0.22)] bg-[rgba(6,27,24,0.45)] p-1.5 backdrop-blur-xl"
+            className="flex w-full gap-1.5 rounded-[22px] border border-[rgba(var(--color-gold-500-rgb),0.22)] bg-[rgba(var(--color-ivory-50-rgb),0.65)] p-1.5 backdrop-blur-xl"
         >
             {sides.map((side) => {
                 const isActive = activeSide === side.id;
@@ -40,8 +40,8 @@ export function FamilySideSelector({ activeSide, onChange }: FamilySideSelectorP
                         onClick={() => onChange(side.id)}
                         onKeyDown={(event) => handleKeyDown(event, side.id)}
                         className={`relative flex min-h-[48px] flex-1 items-center justify-center overflow-hidden rounded-[16px] px-2 text-[10px] font-bold uppercase tracking-[0.14em] transition-all duration-500 ${isActive
-                                ? "bg-[linear-gradient(135deg,var(--color-gold-500),var(--color-gold-300))] text-[var(--color-cathedral-950)] shadow-[0_8px_24px_rgba(245,214,137,0.24)]"
-                                : "text-[rgba(255,248,236,0.68)] hover:bg-[rgba(255,248,236,0.08)]"
+                                ? "bg-[linear-gradient(135deg,var(--color-gold-500),var(--color-gold-300))] text-[var(--color-cathedral-950)] shadow-[0_8px_24px_rgba(var(--color-gold-500-rgb),0.18)]"
+                                : "text-[var(--color-cathedral-800)]/60 hover:bg-[rgba(var(--color-gold-500-rgb),0.08)]"
                             }`}
                     >
                         {isActive && (

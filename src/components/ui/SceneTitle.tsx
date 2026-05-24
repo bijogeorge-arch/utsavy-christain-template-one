@@ -14,7 +14,7 @@ export function SceneTitle({ kicker, title, subtitle, dark = false }: SceneTitle
             {kicker && (
                 <motion.p
                     variants={itemVariants}
-                    className={`font-[var(--font-sacred)] text-[10px] font-semibold uppercase tracking-[0.34em] ${dark ? "text-[var(--color-gold-700)]" : "text-[var(--color-gold-300)]"
+                    className={`font-[var(--font-sacred)] text-[10px] font-semibold uppercase tracking-[0.34em] ${dark ? "text-[var(--color-gold-700)]" : "text-[var(--color-gold-500)]"
                         }`}
                 >
                     {kicker}
@@ -31,7 +31,7 @@ export function SceneTitle({ kicker, title, subtitle, dark = false }: SceneTitle
             {subtitle && (
                 <motion.p
                     variants={itemVariants}
-                    className={`ml-auto max-w-[280px] text-sm leading-6 ${dark ? "text-[rgba(6,27,24,0.76)]" : "text-[rgba(255,248,236,0.76)]"
+                    className={`ml-auto max-w-[280px] text-sm leading-6 ${dark ? "text-[rgba(var(--color-cathedral-900-rgb),0.76)]" : "text-[rgba(var(--color-ivory-100-rgb),0.76)]"
                         }`}
                 >
                     {subtitle}

@@ -117,28 +117,28 @@ export function ThankYouScene({ data }: ThankYouSceneProps) {
             }
         >
             <div 
-                className="relative z-30 h-full w-full"
+                className="relative z-30 w-full"
                 onMouseMove={handleMouseMove}
                 onMouseLeave={handleMouseLeave}
                 style={{ perspective: "1000px" }}
             >
                 <RightAlignedContent className="w-[88%] max-w-[400px] translate-y-[-1%]">
                     <motion.div variants={itemVariants} className="space-y-1">
-                        <p className="font-[var(--font-sacred)] text-[11px] font-bold uppercase tracking-[0.45em] text-[var(--color-gold-300)]">
+                        <p className="font-[var(--font-sacred)] text-[11px] font-bold uppercase tracking-[0.45em] text-[var(--color-gold-700)]">
                             With grateful hearts
                         </p>
 
-                        <h1 className="font-[var(--font-display)] text-[clamp(3.5rem,15vw,5.8rem)] font-semibold leading-[0.8] tracking-[-0.08em] pt-2">
+                        <h1 className="font-[var(--font-display)] text-[clamp(3.5rem,15vw,5.8rem)] font-semibold leading-[0.8] tracking-[-0.08em] pt-2 text-[var(--color-cathedral-950)]">
                             Thank
-                            <span className="block text-[var(--color-gold-300)] mt-1">You</span>
+                            <span className="block text-[var(--color-gold-500)] mt-1">You</span>
                         </h1>
                     </motion.div>
 
                     <motion.p
                         variants={itemVariants}
-                        className="mt-8 max-w-[320px] text-[15px] leading-relaxed text-[rgba(255,248,236,0.8)] font-medium"
+                        className="mt-8 max-w-[320px] text-[15px] leading-relaxed text-[var(--color-cathedral-800)] font-medium"
                     >
-                        Dear <span className="text-[var(--color-gold-300)]">{data.guestName}</span>, {data.copy.thankYou}
+                        Dear <span className="text-[var(--color-gold-600)] font-semibold">{data.guestName}</span>, {data.copy.thankYou}
                     </motion.p>
 
                     <div className="mt-8 mb-4">
@@ -148,22 +148,22 @@ export function ThankYouScene({ data }: ThankYouSceneProps) {
                     <motion.div
                         ref={cardRef}
                         variants={itemVariants}
-                        className="relative overflow-hidden rounded-[32px] border border-[rgba(201,166,70,0.3)] bg-[rgba(6,27,24,0.55)] p-8 text-right shadow-[0_32px_90px_rgba(0,0,0,0.3)] backdrop-blur-2xl"
+                        className="relative overflow-hidden rounded-[32px] border border-[rgba(var(--color-gold-500-rgb),0.22)] bg-[rgba(var(--color-ivory-50-rgb),0.96)] p-8 text-right shadow-[0_32px_120px_rgba(0,0,0,0.06)] backdrop-blur-2xl"
                         style={{ transformStyle: "preserve-3d" }}
                     >
                         {/* Shimmer effect inside card */}
                         <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-transparent via-white/[0.03] to-transparent opacity-50" />
                         
                         <div style={{ transform: "translateZ(30px)" }}>
-                            <p className="font-[var(--font-display)] text-[2.25rem] font-semibold leading-tight text-[var(--color-ivory-100)] tracking-tight">
+                            <p className="font-[var(--font-display)] text-[2.25rem] font-semibold leading-tight text-[var(--color-cathedral-900)] tracking-tight">
                                 {data.bride.first} & {data.groom.first}
                             </p>
 
-                            <p className="mt-4 font-[var(--font-sacred)] text-[11px] font-bold uppercase tracking-[0.3em] text-[var(--color-gold-300)]">
+                            <p className="mt-4 font-[var(--font-sacred)] text-[11px] font-bold uppercase tracking-[0.3em] text-[var(--color-gold-600)]">
                                 {data.events.ceremony.displayDate}
                             </p>
 
-                            <p className="mt-6 text-[14px] leading-relaxed text-[rgba(255,248,236,0.75)] font-medium italic">
+                            <p className="mt-6 text-[14px] leading-relaxed text-[var(--color-cathedral-800)] font-medium italic">
                                 “May your prayers and blessings remain with the couple as they begin
                                 their life together in faith.”
                             </p>
@@ -174,13 +174,13 @@ export function ThankYouScene({ data }: ThankYouSceneProps) {
                         variants={itemVariants}
                         className="mt-8 flex flex-col items-end gap-3"
                     >
-                        <p className="text-[13px] leading-relaxed text-[rgba(255,248,236,0.65)]">
-                            Tap <span className="text-[var(--color-gold-300)] font-bold">Restart</span> below
+                        <p className="text-[13px] leading-relaxed text-[var(--color-cathedral-700)]">
+                            Tap <span className="text-[var(--color-gold-600)] font-bold">Restart</span> below
                             to experience the invitation again.
                         </p>
                         
                         <div className="h-px w-20 bg-gradient-to-l from-[var(--color-gold-500)] to-transparent opacity-40 mt-2" />
-                        <p className="font-[var(--font-sacred)] text-[10px] font-bold uppercase tracking-[0.4em] text-[var(--color-gold-400)] opacity-60">
+                        <p className="font-[var(--font-sacred)] text-[10px] font-bold uppercase tracking-[0.4em] text-[var(--color-gold-600)] opacity-60">
                             Peace be with you
                         </p>
                     </motion.div>

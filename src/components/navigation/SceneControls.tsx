@@ -33,7 +33,7 @@ export function SceneControls({
                 <button
                     type="button"
                     onClick={onPrevious}
-                    className="grid min-h-12 min-w-12 place-items-center rounded-full border border-[rgba(201,166,70,0.35)] bg-[rgba(6,27,24,0.72)] text-[var(--color-gold-300)] backdrop-blur-xl transition hover:bg-[rgba(201,166,70,0.14)]"
+                    className="grid min-h-12 min-w-12 place-items-center rounded-full border border-[rgba(var(--color-gold-500-rgb),0.22)] bg-[rgba(var(--color-ivory-50-rgb),0.85)] text-[var(--color-cathedral-800)] backdrop-blur-xl transition hover:bg-[rgba(var(--color-gold-500-rgb),0.12)] hover:text-[var(--color-gold-600)]"
                     aria-label="Previous scene"
                 >
                     ←

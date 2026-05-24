@@ -39,7 +39,7 @@ export function WelcomeDove() {
                     times: [0, 0.4, 0.75, 1],
                 }}
                 onAnimationComplete={() => setLanded(true)}
-                className="absolute left-[50.8%] top-[18.6%] w-[clamp(4.8rem,15vw,6.6rem)] -translate-x-1/2"
+                className="absolute left-[28%] top-[18.6%] w-[clamp(4.8rem,15vw,6.6rem)] -translate-x-1/2"
             >
                 <motion.div
                     animate={

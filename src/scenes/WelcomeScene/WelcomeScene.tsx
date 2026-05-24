@@ -3,7 +3,7 @@ import type { WeddingData } from "../../types/wedding";
 import { SceneShell } from "../../components/layout/SceneShell";
 import { WelcomeChapelInteriorSvg } from "../../components/svg/WelcomeChapelInteriorSvg";
 import { ChapelLightRays } from "../../components/effects/ChapelLightRays";
-import { OrthodoxCrossSvg } from "../../components/svg/OrthodoxCrossSvg";
+import { ChristianCrossSvg } from "../../components/svg/ChristianCrossSvg";
 import { WelcomeDove } from "../../components/effects/WelcomeDove";
 import { GoldDivider } from "../../components/ui/GoldDivider";
 import { itemVariants } from "../../animations/variants";
@@ -52,20 +52,20 @@ export function WelcomeScene({ data }: WelcomeSceneProps) {
             <WelcomeDove />
 
 
-            <div className="relative z-20 flex h-full flex-col px-6 pb-[7.25rem] pt-10 text-right safe-top">
+            <div className="relative z-20 flex w-full flex-col px-6 pt-10 text-right safe-top">
                 <motion.div
                     variants={itemVariants}
                     className="ml-auto flex items-center justify-end gap-3"
                 >
-                    <span className="h-px w-12 bg-[rgba(245,214,137,0.58)]" />
-                    <p className="font-[var(--font-sacred)] text-[10px] font-bold uppercase tracking-[0.36em] text-[var(--color-gold-300)]">
+                    <span className="h-px w-12 bg-[rgba(var(--color-gold-500-rgb),0.58)]" />
+                    <p className="font-[var(--font-sacred)] text-[10px] font-bold uppercase tracking-[0.36em] text-[var(--color-gold-700)]">
                         With God’s Grace
                     </p>
                 </motion.div>
 
                 <motion.p
                     variants={itemVariants}
-                    className="ml-auto mt-5 max-w-[280px] text-sm leading-6 text-[rgba(255,248,236,0.76)]"
+                    className="ml-auto mt-5 max-w-[280px] text-sm leading-6 text-[var(--color-cathedral-800)]"
                 >
                     With the blessings of our families, we joyfully invite you to witness
                     the Holy Matrimony of
@@ -75,10 +75,10 @@ export function WelcomeScene({ data }: WelcomeSceneProps) {
                     variants={itemVariants}
                     className="welcome-name-lockup sacred-text-shadow ml-auto mt-18 w-full max-w-[330px]"
                 >
-                    <h1 className="font-[var(--font-display)] text-[clamp(3.35rem,13.2vw,5.15rem)] font-semibold leading-[0.78] tracking-[-0.08em] text-[var(--color-ivory-100)]">
+                    <h1 className="font-[var(--font-display)] text-[clamp(3.35rem,13.2vw,5.15rem)] font-semibold leading-[0.78] tracking-[-0.08em] text-[var(--color-cathedral-950)]">
                         <span className="block truncate">{data.bride.first}</span>
 
-                        <span className="my-1 block font-[var(--font-display)] text-[clamp(2.85rem,10.5vw,4.2rem)] leading-none text-[var(--color-gold-300)]">
+                        <span className="my-1 block font-[var(--font-display)] text-[clamp(2.85rem,10.5vw,4.2rem)] leading-none text-[var(--color-gold-500)]">
                             &
                         </span>
 
@@ -95,36 +95,34 @@ export function WelcomeScene({ data }: WelcomeSceneProps) {
 
                 <motion.blockquote
                     variants={itemVariants}
-                    className="welcome-quote-card ml-auto mt-2 max-w-[315px] rounded-[24px] border border-[rgba(201,166,70,0.26)] bg-[rgba(6,27,24,0.42)] p-4 text-right shadow-[0_18px_70px_rgba(0,0,0,0.2)] backdrop-blur-xl"
+                    className="welcome-quote-card ml-auto mt-2 max-w-[315px] rounded-[24px] border border-[rgba(var(--color-gold-500-rgb),0.26)] bg-[rgba(var(--color-ivory-50-rgb),0.76)] p-4 text-right shadow-[0_18px_70px_rgba(0,0,0,0.06)] backdrop-blur-xl"
                 >
-                    <p className="font-[var(--font-display)] text-[1.12rem] italic leading-6 text-[rgba(255,248,236,0.84)]">
+                    <p className="font-[var(--font-display)] text-[1.12rem] italic leading-6 text-[var(--color-cathedral-900)]">
                         “{data.verse.text}”
                     </p>
 
-                    <p className="mt-3 font-[var(--font-sacred)] text-[9px] font-bold uppercase tracking-[0.26em] text-[var(--color-gold-300)]">
+                    <p className="mt-3 font-[var(--font-sacred)] text-[9px] font-bold uppercase tracking-[0.26em] text-[var(--color-gold-700)]">
                         — {data.verse.reference}
                     </p>
                 </motion.blockquote>
 
-                <div className="flex-1" />
-
                 <motion.div
                     variants={itemVariants}
-                    className="welcome-date-badge ml-auto w-full max-w-[330px] overflow-hidden rounded-[26px] border border-[rgba(201,166,70,0.36)] bg-[rgba(6,27,24,0.52)] p-4 shadow-[0_24px_80px_rgba(0,0,0,0.24)] backdrop-blur-xl"
+                    className="welcome-date-badge ml-auto mt-10 w-full max-w-[330px] overflow-hidden rounded-[26px] border border-[rgba(var(--color-gold-500-rgb),0.36)] bg-[rgba(var(--color-ivory-50-rgb),0.78)] p-4 shadow-[0_24px_80px_rgba(0,0,0,0.08)] backdrop-blur-xl"
                 >
                     <span className="absolute inset-y-0 left-0 w-14 animate-[gold-shimmer_3.4s_var(--ease-sacred)_infinite] bg-white/10 blur-md" />
 
                     <div className="relative flex items-center justify-between gap-4 text-left">
-                        <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-[rgba(201,166,70,0.38)] bg-[rgba(245,214,137,0.1)] text-[var(--color-gold-300)]">
-                            <OrthodoxCrossSvg />
+                        <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-[rgba(var(--color-gold-500-rgb),0.38)] bg-[rgba(var(--color-gold-500-rgb),0.1)] text-[var(--color-gold-500)]">
+                            <ChristianCrossSvg />
                         </div>
 
                         <div className="min-w-0 text-right">
-                            <p className="font-[var(--font-sacred)] text-[9px] font-bold uppercase tracking-[0.24em] text-[var(--color-gold-300)]">
+                            <p className="font-[var(--font-sacred)] text-[9px] font-bold uppercase tracking-[0.24em] text-[var(--color-gold-700)]">
                                 {ceremony.displayDate}
                             </p>
 
-                            <p className="mt-2 truncate text-sm leading-5 text-[rgba(255,248,236,0.76)]">
+                            <p className="mt-2 truncate text-sm leading-5 text-[var(--color-cathedral-800)]">
                                 {ceremony.venue}
                             </p>
                         </div>

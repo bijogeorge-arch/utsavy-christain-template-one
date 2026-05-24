@@ -3,6 +3,7 @@ import type { EventKey } from "./EventSelector";
 import { RingBlessingSvg } from "../../components/svg/RingBlessingSvg";
 import { WelcomeChapelInteriorSvg } from "../../components/svg/WelcomeChapelInteriorSvg";
 import { LilyVineSvg } from "../../components/svg/LilyVineSvg";
+import { MinnuPendantSvg } from "../../components/svg/MinnuPendantSvg";
 import { EventTimelineSvg } from "../../components/svg/EventTimelineSvg";
 import { CountdownSparkles } from "../../components/effects/CountdownSparkles";
 
@@ -44,6 +45,19 @@ export function EventVisual({ activeKey }: EventVisualProps) {
                         className="absolute inset-y-0 left-[-30%] z-10 w-[100%] sm:left-[-26%] sm:opacity-82 sm:w-[96%]"
                     >
                         <WelcomeChapelInteriorSvg />
+                    </motion.div>
+                )}
+
+                {activeKey === "minnu" && (
+                    <motion.div
+                        key="minnu-visual"
+                        initial={{ opacity: 0, scale: 0.9, x: -20, filter: "blur(12px)" }}
+                        animate={{ opacity: 0.65, scale: 1, x: 0, filter: "blur(0px)" }}
+                        exit={{ opacity: 0, scale: 1.05, x: -20, filter: "blur(12px)" }}
+                        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                        className="absolute inset-y-0 left-[-22%] z-10 w-[90%] sm:left-[-18%] sm:opacity-82 sm:w-[85%]"
+                    >
+                        <MinnuPendantSvg />
                     </motion.div>
                 )}
 

@@ -3,6 +3,7 @@ export type PersonName = {
     middle?: string;
     last: string;
     full: string;
+    portrait?: string;
 };
 
 export type FamilyDetails = {
@@ -35,6 +36,7 @@ export type GalleryItem = {
     id: string;
     title: string;
     caption: string;
+    src?: string;
 };
 
 export type FamilyContact = {

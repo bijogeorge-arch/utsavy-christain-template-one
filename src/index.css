@@ -18,8 +18,8 @@ body,
 }
 
 html {
-  background: var(--color-cathedral-900);
-  color: var(--color-ivory-100);
+  background: var(--color-pine-900);
+  color: var(--color-cathedral-900);
   font-family: var(--font-body);
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
@@ -30,8 +30,8 @@ body {
   margin: 0;
   overflow: hidden;
   background:
-    radial-gradient(circle at 30% 10%, rgba(245, 214, 137, 0.14), transparent 30%),
-    linear-gradient(180deg, var(--color-cathedral-900), var(--color-pine-900));
+    radial-gradient(circle at 30% 10%, rgba(var(--color-gold-500-rgb), 0.14), transparent 30%),
+    linear-gradient(180deg, var(--color-pine-900), var(--color-pine-800));
 }
 
 button,

@@ -6,8 +6,8 @@ import { GateScene } from "../../scenes/GateScene/GateScene";
 import { WelcomeScene } from "../../scenes/WelcomeScene/WelcomeScene";
 import { StoryScene } from "../../scenes/StoryScene/StoryScene";
 import { CelebrationScene } from "../../scenes/CelebrationScene/CelebrationScene";
-import { GalleryScene } from "../../scenes/GalleryScene/GalleryScene";
 import { EventsScene } from "../../scenes/EventsScene/EventsScene";
+import { GalleryScene } from "../../scenes/GalleryScene/GalleryScene";
 import { FamilyScene } from "../../scenes/FamilyScene/FamilyScene";
 import { CountdownScene } from "../../scenes/CountdownScene/CountdownScene";
 import { RSVPScene } from "../../scenes/RSVPScene/RSVPScene";
@@ -87,11 +87,11 @@ function renderScene(sceneId: SceneId, data: WeddingData, onNext: () => void) {
         case "celebration":
             return <CelebrationScene data={data} />;
 
-        case "gallery":
-            return <GalleryScene data={data} />;
-
         case "events":
             return <EventsScene data={data} />;
+
+        case "gallery":
+            return <GalleryScene data={data} />;
 
         case "family":
             return <FamilyScene data={data} />;

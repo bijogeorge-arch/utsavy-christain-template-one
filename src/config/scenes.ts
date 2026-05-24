@@ -22,25 +22,25 @@ export const scenes: SceneDefinition[] = [
     {
         id: "celebration",
         label: "Celebration",
-        continueLabel: "View Gallery",
-        showProgress: false,
-    },
-    {
-        id: "gallery",
-        label: "Gallery",
         continueLabel: "Wedding Events",
         showProgress: false,
     },
     {
         id: "events",
         label: "Events",
+        continueLabel: "Precious Gallery",
+        showProgress: false,
+    },
+    {
+        id: "gallery",
+        label: "Gallery",
         continueLabel: "Meet the Families",
         showProgress: false,
     },
     {
         id: "family",
         label: "Family",
-        continueLabel: "Countdown",
+        continueLabel: "The Countdown",
         showProgress: false,
     },
     {

@@ -59,7 +59,7 @@ export function WelcomeChapelInteriorSvg() {
                     strokeLinecap="round"
                 />
                 <path
-                    d="M210 482V548M190 508H230M196 528H224M190 550L232 536"
+                    d="M210 482V548M190 508H230"
                     stroke="currentColor"
                     strokeWidth="2.8"
                     strokeLinecap="round"

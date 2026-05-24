@@ -33,22 +33,22 @@ export function CountdownScene({ data }: CountdownSceneProps) {
             <RightAlignedContent className="w-[84%] max-w-[360px] translate-y-[-1%]">
                 <motion.p
                     variants={itemVariants}
-                    className="font-[var(--font-sacred)] text-[10px] font-bold uppercase tracking-[0.34em] text-[var(--color-gold-300)]"
+                    className="font-[var(--font-sacred)] text-[10px] font-bold uppercase tracking-[0.34em] text-[var(--color-gold-700)]"
                 >
                     Final countdown
                 </motion.p>
 
                 <motion.h1
                     variants={itemVariants}
-                    className="mt-3 font-[var(--font-display)] text-[clamp(3.05rem,12vw,4.8rem)] font-semibold leading-[0.86] tracking-[-0.07em]"
+                    className="mt-2 sm:mt-3 font-[var(--font-display)] text-[clamp(2.2rem,9vw,4.8rem)] sm:text-[clamp(3.05rem,12vw,4.8rem)] font-semibold leading-[0.86] tracking-[-0.07em] text-[var(--color-cathedral-950)]"
                 >
                     To Holy
-                    <span className="block text-[var(--color-gold-300)]">Matrimony</span>
+                    <span className="block text-[var(--color-gold-500)]">Matrimony</span>
                 </motion.h1>
 
                 <motion.p
                     variants={itemVariants}
-                    className="mt-4 max-w-[300px] text-sm leading-6 text-[rgba(255,248,236,0.74)]"
+                    className="mt-2 sm:mt-4 max-w-[300px] text-xs sm:text-sm leading-5 sm:leading-6 text-[var(--color-cathedral-800)]"
                 >
                     The sacred hour draws near as {data.bride.first} and{" "}
                     {data.groom.first} prepare to receive the blessing of marriage.
@@ -62,17 +62,17 @@ export function CountdownScene({ data }: CountdownSceneProps) {
 
                 <motion.div
                     variants={itemVariants}
-                    className="mt-5 rounded-[26px] border border-[rgba(201,166,70,0.28)] bg-[rgba(6,27,24,0.5)] p-5 text-right backdrop-blur-xl"
+                    className="mt-4 sm:mt-5 rounded-[20px] sm:rounded-[26px] border border-[rgba(var(--color-gold-500-rgb),0.28)] bg-[rgba(var(--color-ivory-50-rgb),0.78)] p-4 sm:p-5 text-right shadow-[0_12px_40px_rgba(0,0,0,0.04)] backdrop-blur-xl"
                 >
-                    <p className="font-[var(--font-sacred)] text-[10px] font-bold uppercase tracking-[0.28em] text-[var(--color-gold-300)]">
+                    <p className="font-[var(--font-sacred)] text-[10px] font-bold uppercase tracking-[0.28em] text-[var(--color-gold-700)]">
                         {ceremony.displayDate}
                     </p>
 
-                    <p className="mt-2 font-[var(--font-display)] text-3xl font-semibold leading-none text-[var(--color-ivory-100)]">
+                    <p className="mt-2 font-[var(--font-display)] text-3xl font-semibold leading-none text-[var(--color-cathedral-900)]">
                         {ceremony.time}
                     </p>
 
-                    <p className="mt-3 text-sm leading-6 text-[rgba(255,248,236,0.74)]">
+                    <p className="mt-3 text-sm leading-6 text-[var(--color-cathedral-800)]">
                         {ceremony.venue}
                         <br />
                         {ceremony.city}

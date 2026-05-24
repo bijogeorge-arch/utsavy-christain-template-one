@@ -14,39 +14,51 @@ type EventsSceneProps = {
 };
 
 export function EventsScene({ data }: EventsSceneProps) {
-    const [activeKey, setActiveKey] = useState<EventKey>("ceremony");
+    const [activeKey, setActiveKey] = useState<EventKey>("engagement");
 
-    const activeEvent = useMemo(
-        () => data.events[activeKey],
-        [activeKey, data.events],
-    );
+    const activeEvent = useMemo(() => {
+        if (activeKey === "minnu") {
+            return {
+                id: "minnu",
+                title: "Minnu & Manthrakodi",
+                subtitle: "The Sacred Ritual",
+                dateISO: data.events.ceremony.dateISO,
+                displayDate: data.events.ceremony.displayDate,
+                time: data.events.ceremony.time,
+                venue: data.events.ceremony.venue,
+                city: data.events.ceremony.city,
+                mapUrl: data.events.ceremony.mapUrl,
+            };
+        }
+        return data.events[activeKey as keyof typeof data.events];
+    }, [activeKey, data.events]);
 
     return (
         <SceneShell ornament={<EventVisual activeKey={activeKey} />}>
             <RightAlignedContent className="translate-y-0 sm:translate-y-[-1%]">
                 <motion.p
                     variants={itemVariants}
-                    className="font-[var(--font-sacred)] text-[10px] font-bold uppercase tracking-[0.34em] text-[var(--color-gold-300)]"
+                    className="font-[var(--font-sacred)] text-[10px] font-bold uppercase tracking-[0.34em] text-[var(--color-gold-700)]"
                 >
                     Wedding Events
                 </motion.p>
 
                 <motion.h1
                     variants={itemVariants}
-                    className="mt-3 font-[var(--font-display)] text-[clamp(2.8rem,10vw,4.4rem)] font-semibold leading-[0.88] tracking-[-0.07em] text-[var(--color-ivory-100)]"
+                    className="mt-2 sm:mt-3 font-[var(--font-display)] text-[clamp(2.2rem,8vw,4.4rem)] sm:text-[clamp(2.8rem,10vw,4.4rem)] font-semibold leading-[0.88] tracking-[-0.07em] text-[var(--color-cathedral-950)]"
                 >
                     Sacred
-                    <span className="block text-[var(--color-gold-300)]">Moments</span>
+                    <span className="block text-[var(--color-gold-500)]">Moments</span>
                 </motion.h1>
 
                 <motion.p
                     variants={itemVariants}
-                    className="mt-4 max-w-[280px] text-sm leading-relaxed text-[rgba(255,248,236,0.72)] sm:max-w-[300px]"
+                    className="mt-2 sm:mt-4 max-w-[280px] text-xs sm:text-sm leading-relaxed text-[var(--color-cathedral-800)] sm:max-w-[300px]"
                 >
                     Tap each event to reveal its blessing, time, venue, location, and countdown.
                 </motion.p>
 
-                <div className="my-5 w-full sm:my-6">
+                <div className="my-3 w-full sm:my-6">
                     <GoldDivider align="center" className="sm:hidden" />
                     <GoldDivider align="right" className="hidden sm:block" />
                 </div>
@@ -55,7 +67,7 @@ export function EventsScene({ data }: EventsSceneProps) {
                     <EventSelector activeKey={activeKey} onChange={setActiveKey} />
                 </motion.div>
 
-                <div className="mt-6 w-full sm:mt-8">
+                <div className="mt-4 w-full sm:mt-8">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={activeKey}
@@ -64,7 +76,7 @@ export function EventsScene({ data }: EventsSceneProps) {
                             exit={{ opacity: 0, y: -12, scale: 0.98, filter: "blur(8px)" }}
                             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                         >
-                            <EventDetailCard event={activeEvent} activeKey={activeKey} />
+                            <EventDetailCard event={activeEvent} activeKey={activeKey} initials={data.initials} />
                         </motion.div>
                     </AnimatePresence>
                 </div>

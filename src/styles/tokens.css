@@ -1,18 +1,33 @@
 :root {
-    --color-cathedral-950: #061b18;
-    --color-cathedral-900: #0b2f2a;
-    --color-cathedral-800: #123c35;
-    --color-pine-900: #09241f;
-    --color-pine-800: #123c35;
+    --color-cathedral-950: #252422;
+    --color-cathedral-900: #3d3a36;
+    --color-cathedral-800: #5c5752;
+    --color-pine-900: #faf8f5;
+    --color-pine-800: #efece4;
 
-    --color-ivory-50: #fffdf7;
-    --color-ivory-100: #fff8ec;
-    --color-ivory-200: #f7ead2;
+    --color-cathedral-950-rgb: 37, 36, 34;
+    --color-cathedral-900-rgb: 61, 58, 54;
+    --color-cathedral-800-rgb: 92, 87, 82;
+    --color-pine-900-rgb: 250, 248, 245;
+    --color-pine-800-rgb: 239, 236, 228;
 
-    --color-gold-300: #f5d689;
-    --color-gold-400: #dabb5c;
-    --color-gold-500: #c9a646;
-    --color-gold-700: #85691f;
+    --color-ivory-50: #ffffff;
+    --color-ivory-100: #fffdf9;
+    --color-ivory-200: #faf7f0;
+
+    --color-ivory-50-rgb: 255, 255, 255;
+    --color-ivory-100-rgb: 255, 253, 249;
+    --color-ivory-200-rgb: 250, 247, 240;
+
+    --color-gold-300: #e5c384;
+    --color-gold-400: #d4af37;
+    --color-gold-500: #c5a85c;
+    --color-gold-700: #8c7135;
+
+    --color-gold-300-rgb: 229, 195, 132;
+    --color-gold-400-rgb: 212, 175, 55;
+    --color-gold-500-rgb: 197, 168, 92;
+    --color-gold-700-rgb: 140, 113, 53;
 
     --color-burgundy-700: #6e1f2d;
     --color-sapphire-700: #1c4d70;

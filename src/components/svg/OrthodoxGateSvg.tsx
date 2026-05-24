@@ -37,10 +37,10 @@ export function OrthodoxGateSvg() {
 
             <g className="gate-left">
                 <path
-                    d="M54 682V250C54 150 112 74 208 52V682H54Z"
-                    fill="rgba(6,27,24,0.88)"
-                    stroke="currentColor"
-                    strokeWidth="3"
+                     d="M54 682V250C54 150 112 74 208 52V682H54Z"
+                     fill="rgba(var(--color-ivory-50-rgb),0.94)"
+                     stroke="currentColor"
+                     strokeWidth="3"
                 />
                 <path
                     d="M84 642V278C84 188 128 126 184 98V642H84Z"
@@ -63,10 +63,10 @@ export function OrthodoxGateSvg() {
 
             <g className="gate-right">
                 <path
-                    d="M366 682V250C366 150 308 74 212 52V682H366Z"
-                    fill="rgba(6,27,24,0.88)"
-                    stroke="currentColor"
-                    strokeWidth="3"
+                     d="M366 682V250C366 150 308 74 212 52V682H366Z"
+                     fill="rgba(var(--color-ivory-50-rgb),0.94)"
+                     stroke="currentColor"
+                     strokeWidth="3"
                 />
                 <path
                     d="M336 642V278C336 188 292 126 236 98V642H336Z"
@@ -97,7 +97,7 @@ export function OrthodoxGateSvg() {
                     strokeWidth="2"
                 />
                 <path
-                    d="M210 304V356M194 320H226M198 338H222M196 354L224 344"
+                    d="M210 304V356M194 320H226"
                     stroke="currentColor"
                     strokeWidth="3"
                     strokeLinecap="round"

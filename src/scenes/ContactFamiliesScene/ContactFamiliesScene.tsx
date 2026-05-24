@@ -48,23 +48,23 @@ export function ContactFamiliesScene({ data }: ContactFamiliesSceneProps) {
                 <div className="space-y-1">
                     <motion.p
                         variants={itemVariants}
-                        className="font-[var(--font-sacred)] text-[11px] font-bold uppercase tracking-[0.45em] text-[var(--color-gold-300)]"
+                        className="font-[var(--font-sacred)] text-[11px] font-bold uppercase tracking-[0.45em] text-[var(--color-gold-700)]"
                     >
                         Contact Families
                     </motion.p>
 
                     <motion.h1
                         variants={itemVariants}
-                        className="font-[var(--font-display)] text-[clamp(2.8rem,11vw,4.4rem)] font-semibold leading-[0.85] tracking-[-0.07em] pt-2"
+                        className="font-[var(--font-display)] text-[clamp(2.8rem,11vw,4.4rem)] font-semibold leading-[0.85] tracking-[-0.07em] pt-2 text-[var(--color-cathedral-950)]"
                     >
                         Need
-                        <span className="block text-[var(--color-gold-300)]">Assistance?</span>
+                        <span className="block text-[var(--color-gold-500)]">Assistance?</span>
                     </motion.h1>
                 </div>
 
                 <motion.p
                     variants={itemVariants}
-                    className="mt-6 max-w-[340px] text-[14px] leading-relaxed text-[rgba(255,248,236,0.72)] font-medium"
+                    className="mt-6 max-w-[340px] text-[14px] leading-relaxed text-[var(--color-cathedral-800)] font-medium"
                 >
                     For directions, timing, or family coordination, please reach out to the
                     respective family side.

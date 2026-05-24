@@ -137,6 +137,8 @@ export function useGateTimeline({ rootRef, onComplete }: UseGateTimelineParams) 
                 return;
             }
 
+            window.dispatchEvent(new Event("play-wedding-music"));
+
             setIsOpening(true);
             timelineRef.current?.play(0);
         }),

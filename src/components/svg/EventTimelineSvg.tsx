@@ -7,6 +7,7 @@ type EventTimelineSvgProps = {
 const positions: Record<EventKey, number> = {
     engagement: 170,
     ceremony: 320,
+    minnu: 395,
     reception: 470,
 };
 
@@ -63,6 +64,16 @@ export function EventTimelineSvg({ activeKey }: EventTimelineSvgProps) {
                     d="M90 292V348M72 310H108M76 330H104M72 350L110 336"
                     stroke="currentColor"
                     strokeWidth="3"
+                    strokeLinecap="round"
+                />
+            </g>
+
+            <g opacity={activeKey === "minnu" ? 1 : 0.42}>
+                <circle cx="90" cy="395" r="30" stroke="currentColor" strokeWidth="2" />
+                <path
+                    d="M90 382v28M81 392h18M84 400h12M82 411l16-7"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
                     strokeLinecap="round"
                 />
             </g>

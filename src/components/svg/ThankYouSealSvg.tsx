@@ -24,7 +24,7 @@ export function ThankYouSealSvg() {
 
             <g id="thank-you-seal-cross" opacity="0.88">
                 <path
-                    d="M170 148V330M132 204H208M140 250H200M128 336L218 300"
+                    d="M170 148V330M132 204H208"
                     stroke="currentColor"
                     strokeWidth="5"
                     strokeLinecap="round"
